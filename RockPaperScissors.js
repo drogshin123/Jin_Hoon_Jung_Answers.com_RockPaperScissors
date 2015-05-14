@@ -9,13 +9,13 @@ function RockPaperScissors(){
     //variables
     var outcome = Math.random(); 
     var computerMove,
-    userMove,
+    	userMove,
         result;  //for saving in mySQL 
         var userChoice = getUserChoice();
 
     // if nothing is selected then prompt asks user to choose 
     // else assigns userChoice to move to variable.
-    if(userChoice < 0){
+    if (userChoice < 0) {
     	alert("Please choose a Rock, Paper or Scissors");
     	return ;
     }
@@ -23,13 +23,13 @@ function RockPaperScissors(){
 
     // user win probability 40%, computer win probability 30%, tie probability 30%
     // prints results to html page.
-    if(outcome < 0.4){
+    if (outcome < 0.4) {
     	computerMove = winMap[userMove];
     	result = "User Wins";
-    } else if(outcome < 0.7){
+    } else if (outcome < 0.7){
     	computerMove = loseMap[userMove];
     	result = "Computer Wins";
-    } else{  
+    } else {  
     	computerMove = choices[userChoice];
     	result = "Tie";
     }
@@ -39,8 +39,8 @@ function RockPaperScissors(){
 
 function getUserChoice(){
 	var userChoice = -1;
-	for (var i=0;i<3; i++){
-		if(document.getElementsByName("operation")[i].checked){
+	for (var i=0;i<3; i++) {
+		if (document.getElementsByName("operation")[i].checked) {
 			var userChoice = document.getElementsByName("operation")[i].value;
 			return userChoice;
 		}
