@@ -1,0 +1,12 @@
+mysql> create database RPSlog;
+mysql> use RPSlog;
+
+mysql> create table RPS (
+    -> round_id int unsigned not null auto_increment,
+    -> userMove char(10) not null, 
+    -> computerMove char(10) not null, 
+    -> result char(30) not null,
+    -> primary key(round_id)
+    -> ) engine = INNODB DEFAULT character SET = utf8 COLLATE = utf8_general_ci;
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rock, Paper Scissors</title>
+    <style type="text/css">
+    body{
+        width: 760px; 
+        background-color: teal; 
+        margin: 0 auto;
+        padding: 0;
+        font:12px/16px Verdana, sans-serif; 
+    }
+    div#main{
+        background-color: #FFF;
+        margin: 0;
+        padding: 10px;
+    }
+    div.line {
+        display: inline;
+    }
+
+    </style>
+
+</head>
+
+
+<body>
+    <form>
+        <div class="line">
+            <p> Select </p>
+        </div>
+        Rock <input type="radio" name="operation" value="0" /><br>
+        Paper <input type="radio" name="operation" value="1" /><br>
+        Scissors <input type="radio" name="operation" value="2" /><br>
+        
+        <button id="playGame" type="button">Play</button>
+
+        <div id = "result"></div>
+    </form> 
+    <script src="RockPaperScissors.js">
+    </script>
+</body>
+
+
+</html>
